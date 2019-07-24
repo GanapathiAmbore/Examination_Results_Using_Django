@@ -7,11 +7,16 @@
 <body>
 <h2> Your Results page!!</h2>
 <ul>
-  {% for city in qurey%}
-    <li>
-      {{ city.name }}
-    </li>
-  {% endfor %}
+    {%if sr %}
+    {% for city in sr%}
+    <li>Name:{{ city.name }}</li>
+    <li>Group:{{city.group}}</li>
+    <li>Year:{{city.year}}</li>
+    <li>Grade:{{city.grade}}</li>
+    <li>Credits{{city.credits}}</li>
+    <li>Image:<img src="{{ city.image.url}}" alt="{{ city.name }}" width="200"></li>
+    {% endfor %}
+    {%endif%}
 </ul>
 </body>
 </html>

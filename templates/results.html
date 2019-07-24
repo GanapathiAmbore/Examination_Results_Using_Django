@@ -6,10 +6,11 @@
 </head>
 <body>
 <h2>Enter your Hall Ticket Number to get Results</h2>
-<form action="{% url 'search' %}" method="get">
-    your Name:
-<input type="text" placeholder="Enter your Name Here">
-    <input type="submit" value="Submit">
+<form action="{% url 'search' %}" method="post">
+    {%csrf_token%}
+    <span>Your Name</span>
+    <input name="srh" type="text" id="contact" placeholder="Enter your Name Here"/>
+<input type= "submit" value="search">
     </form>
 </body>
 </html>

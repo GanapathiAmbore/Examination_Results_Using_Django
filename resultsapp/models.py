@@ -6,6 +6,7 @@ class Student(models.Model):
     year=models.DateField()
     grade=models.CharField(max_length=1,choices=(('A','first'),('B','second'),('C','third')))
     credits=models.IntegerField()
+    image=models.ImageField(null=True,blank=True)
 
     def __str__(self):
         return self.name
